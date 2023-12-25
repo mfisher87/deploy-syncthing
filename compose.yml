@@ -1,0 +1,19 @@
+services:
+
+  syncthing:
+    image: "syncthing/syncthing"
+    container_name: "syncthing"
+    hostname: "my-syncthing"
+    environment:
+      PUID: 1000
+      PGID: 1000
+      # Only have GUI available on localhost
+      #   https://github.com/syncthing/syncthing/blob/main/README-Docker.md#gui-security
+      STGUIADDRESS: ""
+    volumes:
+      - "./data:/var/syncthing/Sync"
+      - "./config:/var/syncthing/config"
+    # In host network mode, we don't need to expose ports. The app uses its
+    # default ports. See README.
+    network_mode: "host"
+    restart: "unless-stopped"
