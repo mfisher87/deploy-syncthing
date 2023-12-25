@@ -1,6 +1,7 @@
 # My Syncthing deployment
 
-This repo helps me set up a new Syncthing installation quickly.
+This repo helps me set up a new Syncthing installation quickly. Alternately,
+[download a compiled release from GitHub](https://github.com/syncthing/syncthing/releases).
 
 Syncthing is the tool I reach for to solve this problem:
 
@@ -9,20 +10,26 @@ Syncthing is the tool I reach for to solve this problem:
 > _[XKCD 949: File Transfer](https://xkcd.com/949) - Randall Munroe_
 
 
-## Quickstart
+## Installation
+
+```
+git clone {this_repo_url} ~/Sync
+```
+
+> [!NOTE]
+> 
+> Syncthing normally syncs data in and out of `~/Sync`, so to me it seemed easiest to
+> remember to work entirely in that directory, and sync data in and out of
+> `~/Sync/data`. I don't think this is canonical, it just helps me with cognitive load.
+
+
+## Usage
 
 ```
 docker compose up
 ```
 
 Visit <http://localhost:8384> in a browser to view the GUI.
-
-
-## Installation
-
-```
-git clone {this_repo_url} ~/Sync
-```
 
 
 ## Data directories
