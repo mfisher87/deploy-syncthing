@@ -39,9 +39,12 @@ Syncthing from starting. That's why they exist in this repo.
 ### `config/`
 
 Where config for this Syncthing instance goes. Includes information like client ID, so
-it **should not be committed**.
+it **should not be committed**. A `.gitignore` file in this directory is meant to
+prevent that.
 
 
 ### `data/`
 
-Where actual synced data goes.
+Where actual synced data goes. These files might be big, or secret. They're definitely
+irrelevant to this repo, so they **should not be committed**. A `.gitignore` file in
+this directory is meant to prevent that.
