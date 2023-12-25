@@ -55,3 +55,7 @@ prevent that.
 Where actual synced data goes. These files might be big, or secret. They're definitely
 irrelevant to this repo, so they **should not be committed**. A `.gitignore` file in
 this directory is meant to prevent that.
+
+> [!NOTE]
+>
+> The `.gitignore` file will be synced to any devices that share Default Folder.
